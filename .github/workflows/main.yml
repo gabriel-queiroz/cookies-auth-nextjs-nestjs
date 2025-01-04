@@ -6,19 +6,19 @@ on:
       - main
 
 jobs:
-  runs-on: ubuntu-latest
+  buid:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-  steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Setup nodejs
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Install dependencies
+        run: npm install
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: npm test
