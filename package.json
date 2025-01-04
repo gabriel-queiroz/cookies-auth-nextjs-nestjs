@@ -2,7 +2,9 @@
   "name": "@auth-cookies-nextjs/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test":"npx nx affected --target=test"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
